@@ -45,31 +45,26 @@ public class Turtle implements Runnable, ActionListener, MouseListener, MouseMot
 
         bob.penColor("blue");
         bob.width(5);
-        bob.speed(2);
-        bob.forward(60);    // move 30 units (pen down = draw a line)
-        bob.left(90);       // turn left for 90 degrees
-        bob.up();           // pick pen (tail) up
-        bob.forward(80);    // move 40 units (pen up = no drawing)
-        bob.penColor("green"); // change pen color
-        bob.down();         // put pen (tail) down (so it's ready to draw)
-        bob.right(216.87);  // turn right for 216.87 degrees
-        bob.forward(100);     // move 50 units (pen down = draw a line)
-
+        bob.speed(10);
         bob.up();
-        bob.forward(150);
-        bob.right(143.14);
+        bob.forward(60);
+        bob.left(90);
         bob.down();
 
-        // random things
-        bob.home();
+        int x=60;
         bob.penColor("orange");
-        for(int i=0;i<250;i++) {
-            bob.forward(i/25.);
-            bob.width(i*0.1);
-            bob.left(5);
-            if(i%10==0)
-                bob.dot("red",i*0.2);
+        for(int i=0;i<6;i++) {
+            bob.forward(x);
+            bob.left(x);
         }
+
+        bob.up();
+        bob.left(60);
+        bob.forward(60);
+        bob.right(150);
+        bob.down();
+
+
     }
 
     // ========================= Don't modify the code after this point! ========================= //
